@@ -1,0 +1,25 @@
+<template>
+  <div>
+    <main>
+      <NavBar />
+      <NuxtCarousel />
+      <br />
+      <TopSales />
+      <SideBar />
+      <Footer />
+    </main>
+  </div>
+</template>
+
+<script>
+export default {
+  name: "IndexPage",
+};
+</script>
+<style scoped>
+main {
+  background-image: url(../static/Edit.jpg);
+  background-position: -100px;
+  background-size: cover;
+}
+</style>
