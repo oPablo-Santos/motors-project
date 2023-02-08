@@ -18,7 +18,8 @@ export default {
 <style scoped>
 main {
   background-image: url(../static/Edit.jpg);
-  background-position: -100px;
+  background-position-x: -100px;
+  background-position-y: -100px;
   background-size: cover;
 }
 </style>
