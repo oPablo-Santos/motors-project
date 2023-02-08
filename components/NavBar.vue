@@ -10,9 +10,10 @@
     <div>
       <b-dropdown size="lg" variant="link" toggle-class="text-decoration-none" no-caret>
         <template #button-content> &#x1f50d;<span class="sr-only"></span> </template>
-        <b-dropdown-item NuxtLink to="/produtos"> Rodas </b-dropdown-item>
-        <b-dropdown-item NuxtLink to="/produtos"> Transmissão</b-dropdown-item>
-        <b-dropdown-item NunxtLink to="/produtos"> Aerofólios </b-dropdown-item>
+        <b-dropdown-item NuxtLink to="/produtos"> Todos </b-dropdown-item>
+        <b-dropdown-item NuxtLink to="/categories/1"> Rodas </b-dropdown-item>
+        <b-dropdown-item NuxtLink to="/categories/2"> Transmissão</b-dropdown-item>
+        <b-dropdown-item NunxtLink to="/categories/3"> Aerofólios </b-dropdown-item>
       </b-dropdown>
     </div>
     <b-nav-form>

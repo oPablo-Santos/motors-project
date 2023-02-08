@@ -1,8 +1,9 @@
 <template>
-  <div>
-    <NavBar />
+  <main>
     <StreetAddress />
-    
     <NewsLetter />
-  </div>
+  </main>
 </template>
+<style scoped>
+
+</style>

@@ -9,21 +9,14 @@
       </p>
     </div>
     <div class="text-center">
-      <img src="../static/opção.png" alt="Localização" />
+      <img id="maps" src="../static/opção.png" alt="Localização" />
     </div>
   </main>
 </template>
 <style scoped>
-.container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
 
-img {
+#maps {
   max-width: 100%;
-  margin: 20px 0;
 }
 
 </style>

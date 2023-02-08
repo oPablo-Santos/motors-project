@@ -5,6 +5,32 @@
       <div class="text-white">
         <h1>FW Motors &copy; 2023</h1>
         <p>Av. Rangel Pestana | Cep: 11111-222</p>
+        <div class="d-flex">
+        <p>
+          <a href="https://web.whatsapp.com">
+            <img id="wpp"
+              src="../static/face.png"
+              alt="facebook-icon"
+            />
+            11 1234-4321 </a>
+        </p>
+        <p>
+          <a href="https://web.whatsapp.com">
+            <img id="wpp"
+              src="../static/insta.png"
+              alt="Instagram-icon"
+            />
+            11 1234-4321 </a>
+        </p>
+        <p>
+          <a href="https://web.whatsapp.com">
+            <img id="wpp"
+              src="../static/wap.png"
+              alt="whatsapp-icon"
+            />
+            11 1234-4321 </a>
+        </p>
+        </div>
       </div>
     </div>
   </footer>
@@ -21,5 +47,9 @@
 
 img {
   width: 20%;
+}
+
+#wpp {
+  width: 10%;
 }
 </style>
