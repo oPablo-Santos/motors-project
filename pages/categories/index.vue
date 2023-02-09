@@ -1,8 +1,7 @@
 <template>
   <div>
     <main>
-      <TopSales />
-      <Footer />
+      <Nuxt/>
     </main>
   </div>
 </template>

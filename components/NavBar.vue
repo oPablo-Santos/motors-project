@@ -5,15 +5,21 @@
     </router-link>
     <router-link to="/"> Home </router-link>
     <router-link to="/about"> Sobre nós </router-link>
-    <router-link to="/myCart"> Meu Carrinho </router-link>
+    <router-link to="/myCart">
+      <b-icon icon="BIconCart4" variant="danger"></b-icon> Meu Carrinho
+    </router-link>
 
     <div>
-      <b-dropdown size="lg" variant="link" toggle-class="text-decoration-none" no-caret>
-        <template #button-content> &#x1f50d;<span class="sr-only"></span> </template>
+      <b-dropdown variant="link" toggle-class="text-decoration-none" no-caret>
+        <template #button-content>
+          <b-icon id="icon" icon="BIconCollection" variant="danger"></b-icon>
+          <span class="text-white"> Categorias </span>
+          <span class="sr-only"> </span>
+        </template>
         <b-dropdown-item NuxtLink to="/produtos"> Todos </b-dropdown-item>
         <b-dropdown-item NuxtLink to="/categories/1"> Rodas </b-dropdown-item>
         <b-dropdown-item NuxtLink to="/categories/2"> Transmissão</b-dropdown-item>
-        <b-dropdown-item NunxtLink to="/categories/3"> Aerofólios </b-dropdown-item>
+        <b-dropdown-item NuxtLink to="/categories/3"> Aerofólios </b-dropdown-item>
       </b-dropdown>
     </div>
     <b-nav-form>
@@ -22,11 +28,37 @@
         >Search</b-button
       >
     </b-nav-form>
+    <div>
+      <b-dropdown size="lg" variant="link" toggle-class="text-decoration-none" no-caret>
+        <template #button-content>
+          <b-icon icon="BIconPersonCircle" variant="danger" />
+        </template>
+        <b-dropdown-item NuxtLink to="/user"> Usuário </b-dropdown-item>
+        <b-dropdown-item v-if="loggedIn && admin" NuxtLink to="/dash">
+          Dashboard
+        </b-dropdown-item>
+      </b-dropdown>
+    </div>
   </div>
 </template>
 <script>
+import { BIcon, BIconCart4, BIconCollection, BIconPersonCircle } from "bootstrap-vue";
+
 export default {
-  name: "NavBar",
+  components: {
+    BIcon,
+    BIconCart4,
+    BIconCollection,
+    BIconPersonCircle,
+  },
+  computed: {
+    userIsAdmin() {
+      return this.$store.getters["auth/userIsAdmin"];
+    },
+    userIsLoggedIn() {
+      return this.$store.getters["auth/userIsLoggedIn"];
+    },
+  },
 };
 </script>
 <style scoped>
