@@ -13,7 +13,7 @@
       <tbody>
         <tr v-for="item in items" :key="item.id">
           <td>{{ item.name }}</td>
-          <td>{{ item.price }}</td>
+          <td>R$ {{ item.price.toFixed(2) }}</td>
           <td>{{ item.quantity }}</td>
           <td>
             <button class="btn btn-danger btn-sm" @click="removeItem(item)">
@@ -23,18 +23,48 @@
         </tr>
       </tbody>
     </table>
-    <h3>Total: {{ total }}</h3>
+    <h3>Total: R$ {{ total.toFixed(2) }}</h3>
+    <button class="btn btn-primary">
+      <a href="/pay">Finalizar compra</a>
+    </button>
+    <button class="btn btn-secondary">
+      <a href="/">Voltar</a>
+    </button>
   </div>
 </template>
+<style scoped>
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
 
+@media (max-width: 768px) {
+  .container {
+    width: 100%;
+  }
+}
+
+table {
+  width: 100%;
+}
+
+thead th {
+  text-align: left;
+}
+
+button a {
+  color: white;
+  text-decoration: none;
+}
+</style>
 <script>
 export default {
   name: "ShoppingCart",
   data() {
     return {
       items: [
-        { id: 1, name: "Produto 1", price: 10, quantity: 1 },
-        { id: 2, name: "Produto 2", price: 20, quantity: 2 },
+        { id: 1, name: "Produto 1", price: 10.99, quantity: 1 },
+        { id: 2, name: "Produto 2", price: 20.49, quantity: 2 },
       ],
     };
   },

@@ -1,0 +1,63 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Amortecedor Dianteiro",
+      "description": "Amortecedor dianteiro para carros de passeio",
+      "image": "https://example.com/amortecedor_dianteiro.jpg",
+      "price": 199.99,
+      "category": "Amortecedor"
+    },
+    {
+      "id": 2,
+      "name": "Filtro de Óleo",
+      "description": "Filtro de óleo de alta qualidade para carros de passeio",
+      "image": "https://example.com/filtro_de_oleo.jpg",
+      "price": 29.99,
+      "category": "Filtro"
+    },
+    {
+      "id": 3,
+      "name": "Pastilha de Freio Dianteira",
+      "description": "Pastilha de freio dianteira para carros de passeio",
+      "image": "https://example.com/pastilha_de_freio_dianteira.jpg",
+      "price": 79.99,
+      "category": "Pastilha de Freio"
+    },
+    {
+      "id": 6,
+      "name": "Filtro de Óleo",
+      "price": 30.0,
+      "image": "https://www.google.com.br/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png",
+      "description": "Filtro de óleo de alta qualidade para melhor desempenho do seu veículo."
+    },
+    {
+      "id": 7,
+      "name": "Correia Dentada",
+      "price": 50.0,
+      "image": "https://www.google.com.br/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png",
+      "description": "Correia dentada para melhor desempenho do motor de seu veículo."
+    },
+    {
+      "id": 8,
+      "name": "Amortecedor",
+      "price": 100.0,
+      "image": "https://www.google.com.br/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png",
+      "description": "Amortecedor de alta qualidade para melhor dirigibilidade de seu veículo."
+    },
+    {
+      "id": 9,
+      "name": "Bujão de Radiador",
+      "price": 20.0,
+      "image": "https://www.google.com.br/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png",
+      "description": "Bujão de radiador para melhor refrigeração do motor de seu veículo."
+    },
+    {
+      "id": 10,
+      "name": "Molas de Suspensão",
+      "price": 80.0,
+      "image": "https://www.google.com.br/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png",
+      "description": "Molas de suspensão de alta qualidade para melhor estabilidade de seu veículo."
+    }
+  ]
+}

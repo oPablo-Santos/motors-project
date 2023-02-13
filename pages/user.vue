@@ -51,20 +51,20 @@ export default {
         password: "",
       },
       isLoggedIn: true,
-      isAdmin: true,
     };
   },
   mounted() {
     // Verifica se o usuário está logado
     if (localStorage.getItem("user")) {
       this.isLoggedIn = true;
-      // Verifica se o usuário é um administrador
-      if (localStorage.getItem("userRole") === "admin") {
-        this.isAdmin = true;
-      }
     } else {
       this.$router.push("/login");
     }
+  },
+  computed: {
+    isAdmin() {
+      return localStorage.getItem("userRole") === "admin";
+    },
   },
 };
 </script>

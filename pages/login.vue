@@ -22,7 +22,7 @@
                 </b-form-group>
                 <b-button type="submit" variant="primary"> Entrar </b-button>
               </b-form>
-              <hr>
+              <hr />
               <p><a href="/register">Cadastrar-se</a></p>
             </b-card-body>
           </b-card>
@@ -42,7 +42,15 @@ export default {
   },
   methods: {
     login() {
-      // Realizar a validação de login aqui
+      if (email === "admin@email.com" && password === "admin123") {
+        localStorage.setItem("user", email);
+        localStorage.setItem("userRole", "admin");
+        this.$router.push("/");
+      } else {
+        localStorage.setItem("user", email);
+        localStorage.setItem("userRole", "user");
+        this.$router.push("/");
+      }
     },
   },
 };

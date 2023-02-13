@@ -35,7 +35,11 @@ export default {
 
   buildModules: [],
 
-  modules: ["bootstrap-vue/nuxt", "@nuxtjs/pwa"],
+  modules: ["bootstrap-vue/nuxt", "@nuxtjs/pwa", "@nuxtjs/axios"],
+
+  axios: {
+    baseURL: "https://your-base-url.com",
+  },
 
   pwa: {
     manifest: {

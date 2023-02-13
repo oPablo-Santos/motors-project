@@ -3,8 +3,16 @@
     <router-link id="logo_url" NuxtLink to="/">
       <img id="logo" src="../static/logotipo.jpeg" alt="logotipo fwmotors" />
     </router-link>
-    <router-link to="/"> Home </router-link>
-    <router-link to="/about"> Sobre nós </router-link>
+    <b-nav-form class="d-flex" style="justify-content: center">
+      <b-form-input class="mr-sm-2" placeholder="Search"></b-form-input>
+      <b-button variant="outline-danger" class="my-2 my-sm-0" type="submit">
+        Search
+      </b-button>
+    </b-nav-form>
+    <router-link to="/"> <b-icon icon="BIconShop" variant="danger" /> Home </router-link>
+    <router-link to="/about">
+      <b-icon icon="BIconInfoCircle" variant="danger" /> Sobre nós
+    </router-link>
     <router-link to="/myCart">
       <b-icon icon="BIconCart4" variant="danger"></b-icon> Meu Carrinho
     </router-link>
@@ -22,12 +30,6 @@
         <b-dropdown-item NuxtLink to="/categories/3"> Aerofólios </b-dropdown-item>
       </b-dropdown>
     </div>
-    <b-nav-form>
-      <b-form-input class="mr-sm-2" placeholder="Search"></b-form-input>
-      <b-button variant="outline-danger" class="my-2 my-sm-0" type="submit"
-        >Search</b-button
-      >
-    </b-nav-form>
     <div>
       <b-dropdown size="lg" variant="link" toggle-class="text-decoration-none" no-caret>
         <template #button-content>
@@ -42,14 +44,23 @@
   </div>
 </template>
 <script>
-import { BIcon, BIconCart4, BIconCollection, BIconPersonCircle } from "bootstrap-vue";
+import {
+  BIcon,
+  BIconCart4,
+  BIconInfoCircle,
+  BIconCollection,
+  BIconShop,
+  BIconPersonCircle,
+} from "bootstrap-vue";
 
 export default {
   components: {
     BIcon,
+    BIconShop,
     BIconCart4,
     BIconCollection,
     BIconPersonCircle,
+    BIconInfoCircle,
   },
   computed: {
     userIsAdmin() {
@@ -63,7 +74,7 @@ export default {
 </script>
 <style scoped>
 #nav {
-  background-color: #0f0f0f;
+  background-color: #000000;
   border-bottom: 6px solid #ff0000;
   padding: 15px 50px;
   display: flex;
